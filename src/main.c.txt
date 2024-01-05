@@ -1,0 +1,23 @@
+int tinhtienkaraoke(){
+	int giovao;
+	int giora;
+	nhaplai:
+		printf("nhap so gio bat dau :");scanf("%d",&giovao);
+		printf("nhap so gio ket thuc:");scanf("%d",&giora );
+		int tongtien;
+		int sogio=giora-giovao;
+		if(giovao <12||giora>23){
+			printf("quan khong hoat dong vao gio nay vui long nhap lai ");
+			goto nhaplai;
+		}
+		if (sogio<=3){
+			tongtien=sogio*150000;
+		}else{
+			tongtien=3*150000+(sogio-3)*150000*0.7;
+		}
+		if(giovao>14 && giora<17){
+			tongtien=tongtien*0.9;
+		}
+		printf("tong so tien can phai thanh toan : %d D",tongtien);
+	return 0;
+}
